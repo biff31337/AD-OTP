@@ -56,5 +56,3 @@ If you encounter any issues or have questions, please open an issue on GitHub or
 Acknowledgements
 
     Inspired by various 2FA implementations and security best practices.
-
-    Inspired by various 2FA implementations and security best practices.
