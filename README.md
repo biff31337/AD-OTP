@@ -41,7 +41,8 @@ Welcome to the Google OTP Integration for Active Directory repository. This proj
 ## Usage
 
 ### Configuration
-Open (Menue)Configuration -> Global Settings, edit name of domaincontroller, name of domain and useraccount for service
+Open (Menue)Configuration -> Global Settings, edit name of domaincontroller, name of domain and useraccount for service.  
+Press Install service to register ad_otp_service.exe and start it immediatly.
 
 ### User Enrollment
 Users need to enroll their accounts with a TOTP application like Google Authenticator.  
