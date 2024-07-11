@@ -50,12 +50,15 @@ Usage
 Contributing
 
 We welcome contributions from the community! Please read our CONTRIBUTING.md for guidelines on how to contribute to this project.
+
 License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
+
 Support
 
 If you encounter any issues or have questions, please open an issue on GitHub or contact us at frank.liebig@kakiarts.de.
+
 Acknowledgements
 
     Inspired by various 2FA implementations and security best practices.
