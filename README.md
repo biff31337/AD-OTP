@@ -7,18 +7,18 @@ Welcome to the Google OTP Integration for Active Directory repository. This proj
 
 ## Features
 	
-Two-Factor Authentication (2FA): Adds an additional layer of security by requiring a Google OTP in addition to the standard Active Directory password.
-Easy Setup: Simple configuration and integration process with detailed documentation.
-Compatibility: Works with existing Active Directory setups without requiring significant changes.
-User Management: Allows administrators to manage OTP settings for individual users.
-Secure Authentication: Utilizes secure methods to generate and verify OTPs, ensuring robust protection against unauthorized access.
+Two-Factor Authentication (2FA): Adds an additional layer of security by requiring a Google OTP in addition to the standard Active Directory password.  
+Easy Setup: Simple configuration and integration process with detailed documentation.  
+Compatibility: Works with existing Active Directory setups without requiring significant changes.  
+User Management: Allows administrators to manage OTP settings for individual users.  
+Secure Authentication: Utilizes secure methods to generate and verify OTPs, ensuring robust protection against unauthorized access.  
 
 ## Prerequisites
 
-Active Directory environment (Windows Server 2012 R2 or later)
-Google Authenticator or any other TOTP-based application
-Delphi IDE (RAD Studio 12 or later)
-Administrative access to the Active Directory server
+Active Directory environment (Windows Server 2012 R2 or later)  
+Google Authenticator or any other TOTP-based application  
+Delphi IDE (RAD Studio 12 or later)  
+Administrative access to the Active Directory server  
 
 ## Installation
 
