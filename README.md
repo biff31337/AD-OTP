@@ -15,6 +15,7 @@ Prerequisites
 
     Active Directory environment (Windows Server 2012 or later)
     Google Authenticator or any other TOTP-based application
+    Delphi IDE (RAD Studio XE7 or later)
     Administrative access to the Active Directory server
 
 Installation
@@ -23,24 +24,20 @@ Installation
 
     sh
 
-git clone https://github.com/yourusername/google-otp-ad.git
-cd google-otp-ad
+    git clone https://github.com/yourusername/google-otp-ad-delphi.git
+    cd google-otp-ad-delphi
 
-Configure the Application:
+    Open in Delphi IDE:
+        Open the Delphi project file (.dproj) in RAD Studio.
 
-    Update the configuration file with your Active Directory settings and desired OTP settings.
+    Configure the Application:
+        Update the configuration settings in the source code with your Active Directory settings and desired OTP settings.
 
-Install Dependencies:
+    Build the Project:
+        Compile the project in Delphi IDE to generate the executable.
 
-sh
-
-pip install -r requirements.txt
-
-Run the Integration Script:
-
-sh
-
-    python integrate_otp.py
+    Run the Integration Application:
+        Execute the compiled application to start the integration process.
 
 Usage
 
@@ -57,5 +54,7 @@ Support
 
 If you encounter any issues or have questions, please open an issue on GitHub or contact us at support@example.com.
 Acknowledgements
+
+    Inspired by various 2FA implementations and security best practices.
 
     Inspired by various 2FA implementations and security best practices.
