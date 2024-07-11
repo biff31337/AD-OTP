@@ -55,7 +55,7 @@ Upon logging in, users will have to add OTP from their TOTP application in addit
 
 ## Contributing
 
-We welcome contributions from the community! Please read our CONTRIBUTING.md for guidelines on how to contribute to this project.
+We welcome contributions from the community!
 
 ## License
 
