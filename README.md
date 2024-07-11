@@ -45,6 +45,7 @@ Open (Menue)Configuration -> Global Settings, edit Name of Domaincontroller, nam
 
 ### User Enrollment
 Users need to enroll their accounts with a TOTP application like Google Authenticator.
+Open (Menue)Configuration -> User configuration and create new user, edit usernname and static part of desired password, check activated
 
 ### Authentication
 Upon logging in, users will have to add OTP from their TOTP application in addition to their password.
