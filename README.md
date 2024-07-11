@@ -7,11 +7,11 @@ Welcome to the Google OTP Integration for Active Directory repository. This proj
 
 Features
 
-    Two-Factor Authentication (2FA): Adds an additional layer of security by requiring a Google OTP in addition to the standard Active Directory password.
-    Easy Setup: Simple configuration and integration process with detailed documentation.
-    Compatibility: Works with existing Active Directory setups without requiring significant changes.
-    User Management: Allows administrators to manage OTP settings for individual users.
-    Secure Authentication: Utilizes secure methods to generate and verify OTPs, ensuring robust protection against unauthorized access.
+Two-Factor Authentication (2FA): Adds an additional layer of security by requiring a Google OTP in addition to the standard Active Directory password.
+Easy Setup: Simple configuration and integration process with detailed documentation.
+Compatibility: Works with existing Active Directory setups without requiring significant changes.
+User Management: Allows administrators to manage OTP settings for individual users.
+Secure Authentication: Utilizes secure methods to generate and verify OTPs, ensuring robust protection against unauthorized access.
 
 Prerequisites
 
