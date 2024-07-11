@@ -40,6 +40,7 @@ Installation
 
 Usage
 
+    Configuration: Open (Menue)Configuration -> Global Settings, edit Name of Domaincontroller, name of Domain and Useraccount for Service
     User Enrollment: Users need to enroll their accounts with a TOTP application like Google Authenticator.
     Authentication: Upon logging in, users will have to add OTP from their TOTP application in addition to their password.
 	
