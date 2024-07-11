@@ -44,7 +44,7 @@ Welcome to the Google OTP Integration for Active Directory repository. This proj
 Open (Menue)Configuration -> Global Settings, edit Name of Domaincontroller, name of Domain and Useraccount for Service
 
 ### User Enrollment
-Users need to enroll their accounts with a TOTP application like Google Authenticator.
+Users need to enroll their accounts with a TOTP application like Google Authenticator.  
 Open (Menue)Configuration -> User configuration and create new user, edit usernname and static part of desired password, check activated
 
 ### Authentication
