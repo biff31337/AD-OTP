@@ -61,6 +61,10 @@ We welcome contributions from the community!
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
+## Binarys
+
+All binary releases and source code: https://github.com/biff31337/AD-OTP/releases
+
 ## Support
 
 If you encounter any issues or have questions, please open an issue on GitHub or contact us at frank.liebig@kakiarts.de.
