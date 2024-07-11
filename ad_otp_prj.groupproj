@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D0B1E9BA-091D-4AAB-80FC-8169E01D6296}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ad_otp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ad_otp_service.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ad_otp">
+        <MSBuild Projects="ad_otp.dproj"/>
+    </Target>
+    <Target Name="ad_otp:Clean">
+        <MSBuild Projects="ad_otp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ad_otp:Make">
+        <MSBuild Projects="ad_otp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ad_otp_service">
+        <MSBuild Projects="ad_otp_service.dproj"/>
+    </Target>
+    <Target Name="ad_otp_service:Clean">
+        <MSBuild Projects="ad_otp_service.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ad_otp_service:Make">
+        <MSBuild Projects="ad_otp_service.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ad_otp;ad_otp_service"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ad_otp:Clean;ad_otp_service:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ad_otp:Make;ad_otp_service:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
