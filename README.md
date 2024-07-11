@@ -4,6 +4,7 @@ Google OTP Integration for Active Directory
 Overview
 
 Welcome to the Google OTP Integration for Active Directory repository. This project provides a seamless solution to enhance the security of your Active Directory environment by integrating Google OTP (One-Time Password) for two-factor authentication (2FA). This ensures that only authorized users with the correct OTP from Google Authenticator can access your Active Directory services.
+
 Features
 
     Two-Factor Authentication (2FA): Adds an additional layer of security by requiring a Google OTP in addition to the standard Active Directory password.
