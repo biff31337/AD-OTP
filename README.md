@@ -68,3 +68,6 @@ If you encounter any issues or have questions, please open an issue on GitHub or
 ## Acknowledgements
 
     Inspired by various 2FA implementations and security best practices.
+    https://github.com/BoscoBecker/Delphi-and-Google-Authenticator
+    https://github.com/foxitsoftware/DelphiZXingQRCode
+    https://github.com/wendelb/DelphiOTP
