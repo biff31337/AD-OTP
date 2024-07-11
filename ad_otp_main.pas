@@ -59,9 +59,9 @@ begin
   FDConnection1.Params.Values['database'] := DBName;
   if FileExists(DBName)=false then begin
     FDConnection1.Connected:= True;
-    FDCommand1.Execute('CREATE TABLE USERS (ID INTEGER PRIMARY KEY,	Login VARCHAR(255), Secret VARCHAR(255), Password VARCHAR(255), flagEnabled BIT);');
+    FDCommand1.Execute('CREATE TABLE USERS (ID INTEGER PRIMARY KEY, Login VARCHAR(255), Secret VARCHAR(255), Password VARCHAR(255), flagEnabled BIT);');
     FDCommand1.Execute('CREATE TABLE GLOBAL (ID INTEGER PRIMARY KEY, Server VARCHAR(255), Domain VARCHAR(255), Login VARCHAR(255));');
-    FDCommand1.Execute('INSERT INTO GLOBAL (Server,Domain,Login) VALUES (:s1,:s2,:s3);',['Server','Domain','Administrator']);
+    FDCommand1.Execute('INSERT INTO GLOBAL (Version,Server,Domain,Login) VALUES (1,:s1,:s2,:s3);',['Server','Domain','Administrator']);
   end else
     FDConnection1.Connected:= True;
   GLOBAL.Open();
