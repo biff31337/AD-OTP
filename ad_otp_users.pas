@@ -36,6 +36,7 @@ type
     procedure Button4Click(Sender: TObject);
     procedure FDQuery1AfterScroll(DataSet: TDataSet);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure FDQuery1AfterPost(DataSet: TDataSet);
   private
     QRCodeBitmap: TBitmap;
   public
@@ -82,6 +83,11 @@ begin
   UI1003.Password:=@BufPassword;
   Res:=NetUserSetInfo(PWideChar(WideString(Form1.GLOBAL.FindField('Server').AsString)),PWideChar(WideString(FDQuery1.FindField('Login').AsString)),1003,@UI1003,Param_Err);
   if res<>0 then ShowMessage(SysErrorMessage(res));
+end;
+
+procedure TForm3.FDQuery1AfterPost(DataSet: TDataSet);
+begin
+  FDQuery1AfterScroll(nil);
 end;
 
 procedure TForm3.FDQuery1AfterScroll(DataSet: TDataSet);

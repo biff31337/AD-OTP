@@ -57,11 +57,12 @@ object Form1: TForm1
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'DriverID=SQLite'
-      'LockingMode=Normal')
+      'LockingMode=Normal'
+      'Encrypt=aes-256'
+      'Password=ad_otp'
+      'DriverID=SQLite')
     UpdateOptions.AssignedValues = [uvAutoCommitUpdates]
     UpdateOptions.AutoCommitUpdates = True
-    Connected = True
     LoginPrompt = False
     Left = 256
     Top = 88

@@ -127,6 +127,7 @@ object Form3: TForm3
     Top = 56
   end
   object FDQuery1: TFDQuery
+    AfterPost = FDQuery1AfterPost
     AfterScroll = FDQuery1AfterScroll
     Connection = Form1.FDConnection1
     UpdateOptions.AssignedValues = [uvEInsert]
