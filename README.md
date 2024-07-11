@@ -41,8 +41,9 @@ Installation
 
 Usage
 
-    User Enrollment: Users need to enroll their accounts with a TOTP application like Google Authenticator. This can be done through a web interface or command-line tool provided by the integration.
-    Authentication: Upon logging in, users will be prompted to enter the OTP from their TOTP application after providing their Active Directory password.
+    User Enrollment: Users need to enroll their accounts with a TOTP application like Google Authenticator.
+    Authentication: Upon logging in, users will have to add OTP from their TOTP application in addition to their password.
+	
 
 Contributing
 
