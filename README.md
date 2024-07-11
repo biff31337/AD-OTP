@@ -27,7 +27,7 @@ Welcome to the Google OTP Integration for Active Directory repository. This proj
     git clone https://github.com/biff31337/AD-OTP.git
     
     Open in Delphi IDE:
-        Open the Delphi project file (.dproj) in RAD Studio.
+        Open the Delphi project group file (ad_otp_prj.groupproj) in RAD Studio.
 
     Configure the Application:
         Nothing to do here.
