@@ -61,7 +61,7 @@ We welcome contributions from the community!
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-## Binarys
+## Downloads
 
 All binary releases and source code: https://github.com/biff31337/AD-OTP/releases
 
