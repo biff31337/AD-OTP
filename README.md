@@ -15,13 +15,13 @@ Secure Authentication: Utilizes secure methods to generate and verify OTPs, ensu
 
 Prerequisites
 
-Active Directory environment (Windows Server 2012 R2 or later)
+	Active Directory environment (Windows Server 2012 R2 or later)
 
-Google Authenticator or any other TOTP-based application
+	Google Authenticator or any other TOTP-based application
 
-Delphi IDE (RAD Studio 12 or later)
+	Delphi IDE (RAD Studio 12 or later)
 
-Administrative access to the Active Directory server
+	Administrative access to the Active Directory server
 
 Installation
 
