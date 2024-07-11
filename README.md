@@ -13,9 +13,9 @@ Features
 
 Prerequisites
 
-    Active Directory environment (Windows Server 2012 or later)
+    Active Directory environment (Windows Server 2012 R2 or later)
     Google Authenticator or any other TOTP-based application
-    Delphi IDE (RAD Studio XE7 or later)
+    Delphi IDE (RAD Studio 12 or later)
     Administrative access to the Active Directory server
 
 Installation
