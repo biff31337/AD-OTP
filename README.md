@@ -24,22 +24,19 @@ Installation
 
     Clone the Repository:
 
-    sh
-
-    git clone https://github.com/yourusername/google-otp-ad-delphi.git
-    cd google-otp-ad-delphi
-
+    git clone https://github.com/biff31337/AD-OTP.git
+    
     Open in Delphi IDE:
         Open the Delphi project file (.dproj) in RAD Studio.
 
     Configure the Application:
-        Update the configuration settings in the source code with your Active Directory settings and desired OTP settings.
+        Nothing to do here.
 
     Build the Project:
-        Compile the project in Delphi IDE to generate the executable.
+        Compile the project in Delphi IDE to generate the executables.
 
     Run the Integration Application:
-        Execute the compiled application to start the integration process.
+        Execute ad_otp.exe as administrator to start the integration process.
 
 Usage
 
