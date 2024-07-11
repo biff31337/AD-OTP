@@ -1,2 +1,2 @@
 # AD-OTP
-Test
+Active Directory one time password
