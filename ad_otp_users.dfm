@@ -16,16 +16,12 @@ object Form3: TForm3
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
-  DesignSize = (
-    1041
-    632)
   TextHeight = 15
   object PaintBox1: TPaintBox
     Left = 272
     Top = 122
-    Width = 232
-    Height = 250
-    Anchors = [akLeft, akTop, akRight, akBottom]
+    Width = 305
+    Height = 305
     OnPaint = PaintBox1Paint
   end
   object DBGrid1: TDBGrid
