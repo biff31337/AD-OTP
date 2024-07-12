@@ -49,7 +49,8 @@ Press Install service to register ad_otp_service.exe and start it immediatly.
 ### User Enrollment
 Users need to enroll their accounts with a TOTP application like Google Authenticator.  
 Open (Menue)Configuration -> User configuration and create new user, edit usernname and static part of desired password, check activated.  
-Scan QR code with Google authentificator app to add account.
+Scan QR code with Google authentificator app to add account.  
+The Set Password button tries to update the useraccount to check if everything is working (password rules etc...)
 
 ![configuration](/assets/users.png)
 
