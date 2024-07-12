@@ -51,6 +51,8 @@ Users need to enroll their accounts with a TOTP application like Google Authenti
 Open (Menue)Configuration -> User configuration and create new user, edit usernname and static part of desired password, check activated.  
 Scan QR code with Google authentificator app to add account.
 
+![configuration](/assets/users.png)
+
 ### Authentication
 Upon logging in, users will have to add OTP from their TOTP application in addition to their password.
 	
