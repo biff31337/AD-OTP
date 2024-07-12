@@ -72,7 +72,7 @@ All binary releases and source code: https://github.com/biff31337/AD-OTP/release
 
 ## Support
 
-If you encounter any issues or have questions, please open an issue on GitHub or contact us at frank.liebig@kakiarts.de.
+If you encounter any issues or have questions, please open an issue on GitHub or contact me at frank.liebig@kakiarts.de.
 
 ## Acknowledgements
 
