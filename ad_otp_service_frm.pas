@@ -105,7 +105,7 @@ begin
       StringToWideChar(FDQuery1.FindField('Password').AsString+FormatFloat('000000',CalculateOTP(FDQuery1.findfield('Secret').asstring)),BufPassword,Length(BufPassword));
       UI1003.Password:=@BufPassword;
       Res:=NetUserSetInfo(PWideChar(WideString(GLOBAL.FindField('Server').AsString)),PWideChar(WideString(FDQuery1.FindField('Login').AsString)),1003,@UI1003,Param_Err);
-      if res<>0 then WriteLog(SysErrorMessage(res));
+      if res<>0 then WriteLog(FormatDateTime('hh:nn:ss.zzz',now)+' '+SysErrorMessage(res));
       FDQuery1.Next;
     end;
     FDConnection1.Connected:=false;
@@ -114,7 +114,7 @@ begin
       WriteLog(FormatDateTime('hh:nn:ss.zzz',now)+' '+E.ClassName+': '+E.Message);
     end;
   end;
-  Timer1.Interval:=MilliSecondsBetween(now,RoundToNearest(now,EncodeTime(0,0,30,00)));
+  Timer1.Interval:=100+MilliSecondsBetween(now,RoundToNearest(now,EncodeTime(0,0,30,00)));
   Timer1.Enabled:=true;
 end;
 
