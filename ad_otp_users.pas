@@ -8,7 +8,8 @@ uses
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB, Vcl.Grids,
   Vcl.DBGrids, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls,
-  Vcl.ExtCtrls, Vcl.Mask, Vcl.DBCtrls, DelphiZXingQRCode, Math, DateUtils, GoogleOTP;
+  Vcl.ExtCtrls, Vcl.Mask, Vcl.DBCtrls, DelphiZXingQRCode, Math, DateUtils,
+  GoogleOTP, ad_otp_utils;
 
 type
   NetAPIStatus = Integer;
@@ -45,7 +46,7 @@ type
 var
   Form3: TForm3;
   Param_Err : DWORD;
-  Function NetUserSetInfo(ServerName, UserName : PWideChar; Level : Integer; Const Buf : Pointer; Var Parm_Err : DWORD) : NetAPIStatus; StdCall; External 'NETAPI32.DLL';
+
 
 implementation
 

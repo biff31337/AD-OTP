@@ -4,7 +4,8 @@ uses
   Vcl.Forms,
   ad_otp_main in 'ad_otp_main.pas' {Form1},
   ad_otp_config in 'ad_otp_config.pas' {Form2},
-  ad_otp_users in 'ad_otp_users.pas' {Form3};
+  ad_otp_users in 'ad_otp_users.pas' {Form3},
+  ad_otp_utils in 'ad_otp_utils.pas';
 
 {$R *.res}
 

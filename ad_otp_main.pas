@@ -11,7 +11,7 @@ uses
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.SQLite,
   FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client, FireDAC.Stan.Param,
   FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Phys.SQLiteWrapper.FDEStat, FireDAC.Phys.SQLiteWrapper;
+  FireDAC.Phys.SQLiteWrapper.FDEStat, FireDAC.Phys.SQLiteWrapper, ad_otp_utils;
 
 type
   TForm1 = class(TForm)
@@ -52,18 +52,28 @@ begin
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
+var username,password:string;
 begin
   DBName:=TPath.GetPublicPath()+'\ad_otp\ad_otp.sdb';
   if not TDirectory.Exists(TPath.GetPublicPath()+'\ad_otp') then TDirectory.CreateDirectory(TPath.GetPublicPath()+'\ad_otp');
   //if FileExists(DBName) then DeleteFile(DBName);
   FDConnection1.Params.Values['database'] := DBName;
   if FileExists(DBName)=false then begin
+    password:=GeneratePassword(15);
+    CredWriteGenericCredentials('AD_OTP','database',password);
+    FDConnection1.Params.Password:=password;
     FDConnection1.Connected:= True;
     FDCommand1.Execute('CREATE TABLE USERS (ID INTEGER PRIMARY KEY, Login VARCHAR(255), Secret VARCHAR(255), Password VARCHAR(255), flagEnabled BIT);');
-    FDCommand1.Execute('CREATE TABLE GLOBAL (ID INTEGER PRIMARY KEY, Server VARCHAR(255), Domain VARCHAR(255), Login VARCHAR(255));');
+    FDCommand1.Execute('CREATE TABLE GLOBAL (ID INTEGER PRIMARY KEY, Version INT, Server VARCHAR(255), Domain VARCHAR(255), Login VARCHAR(255));');
     FDCommand1.Execute('INSERT INTO GLOBAL (Version,Server,Domain,Login) VALUES (1,:s1,:s2,:s3);',['Server','Domain','Administrator']);
-  end else
+  end else begin
+    if CredReadGenericCredentials('AD_OTP',username,password)=false then begin
+     password:='ad_otp';
+     CredWriteGenericCredentials('AD_OTP','database',password);
+    end;
+    FDConnection1.Params.Password:=password;
     FDConnection1.Connected:= True;
+  end;
   GLOBAL.Open();
 end;
 

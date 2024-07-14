@@ -10,7 +10,7 @@ uses
   FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.VCLUI.Wait,
   Data.DB, FireDAC.Comp.Client, System.IOUtils, FireDAC.Stan.Param,
   FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet,
-  DateUtils, Math, GoogleOTP, FireDAC.Phys.SQLiteWrapper.FDEStat;
+  DateUtils, Math, GoogleOTP, FireDAC.Phys.SQLiteWrapper.FDEStat, ad_otp_utils;
 
 type
   NetAPIStatus = Integer;
@@ -34,8 +34,7 @@ type
 var
   ADOTPService: TADOTPService;
   Param_Err : DWORD;
-  Function NetUserSetInfo(ServerName, UserName : PWideChar; Level : Integer; Const Buf : Pointer; Var Parm_Err : DWORD) : NetAPIStatus; StdCall; External 'NETAPI32.DLL';
-
+ 
 
 implementation
 
@@ -83,10 +82,15 @@ begin
 end;
 
 procedure TADOTPService.ServiceStart(Sender: TService; var Started: Boolean);
+var username,password:string;
 begin
   if FileExists(TPath.GetPublicPath()+'\ad_otp\ao_otp.log') then DeleteFile(TPath.GetPublicPath()+'\ad_otp\ao_otp.log');
   WriteLog(FormatDateTime('hh:nn:ss.zzz',now)+' Start.');
   FDConnection1.Params.Values['database'] := TPath.GetPublicPath()+'\ad_otp\ad_otp.sdb';
+  if CredReadGenericCredentials('AD_OTP',username,password)=false then begin
+    WriteLog(FormatDateTime('hh:nn:ss.zzz',now)+' No database credentials found.');
+  end;
+  FDConnection1.Params.Password:=password;
   Timer1.Interval:=1;
   Timer1.Enabled:=true;
 end;
